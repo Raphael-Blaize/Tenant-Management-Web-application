@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Attendance Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="usiu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="rh-international-high-resolution-logo-black-transparent.png" alt="Logo" class="img-fluid"
+                        style="max-height: 100px;">
+                </a>
+            </div>
+        </nav>
+
+        <section class="attendance text-center text-white" id="welcome-section">
+            <div class="attendance-details">
+                <h1 class="display-4">Welcome To R&H</h1>
+                <h3 class="lead">R&H Log-In Management System</h3>
+                <button class="btn btn-warning mt-4" onclick="scrollToLoginForm()">Get Started</button>
+            </div>
+        </section>
+
+        <section class="log-in mt-5" id="login-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="login-container">
+                            <form action="/login" method="POST" class="login-form">
+                                <h2 class="text-center mb-4">Login</h2>
+                                <div class="input-box">
+                                    <input type="text" id="username" name="username" required>
+                                    <label for="username">Username</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="password" id="password" name="password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="input-box text-center">
+                                    <button type="submit" class="btn btn-warning w-100">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="signup-container">
+                            <h3 class="text-center">Sign Up</h3>
+                            <form action="/signup" method="POST" class="signup-form">
+                                <div class="input-box">
+                                    <input type="text" id="new-username" name="newUsername" required>
+                                    <label for="new-username">New Username</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="password" id="new-password" name="newPassword" required>
+                                    <label for="new-password">New Password</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="contact" name="contact" required>
+                                    <label for="contact">Contact Number</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="house-number" name="houseNumber" required>
+                                    <label for="house-number">House Number</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="phone" name="phone" required>
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="input-box text-center">
+                                    <button type="submit" class="btn btn-warning w-100">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
+    <script src="scroll.js"></script>
+</body>
+
+</html>

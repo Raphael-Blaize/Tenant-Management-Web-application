@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #2b3990;
+    background-color: #f8f9fa;
+    /* Light background for contrast */
+}
+
+.sidebar {
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    z-index: 1000;
+}
+
+.sidebar:hover,
+.sidebar.show {
+    width: 250px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 56px;
+}
+
+.sidebar ul ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul ul li {
+    text-align: center;
+}
+
+.sidebar ul ul a {
+    padding: 5px 10px;
+    color: #ccc;
+}
+
+.sidebar ul ul a:hover {
+    background-color: #495057;
+    color: white;
+}
+
+.collapse {
+    transition: height 0.2s ease;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    /* Adjusted padding to remove excess space */
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    /* Added padding for better touch area */
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+}
+
+.sidebar ul li a .sidebar-text {
+    display: none;
+}
+
+.sidebar:hover ul li a .sidebar-text {
+    display: inline-block;
+}
+
+.navbar-brand img {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+/* Main Section */
+.main-content {
+    margin-left: 60px;
+    padding: 20px;
+    z-index: 0;
+}
+
+.main {
+    padding: 20px;
+    width: 100%;
+}
+
+.main-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-top i {
+    color: rgb(110, 109, 109);
+    cursor: pointer;
+}
+
+.main .users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 15px;
+    /* Rounded corners for cards */
+}
+
+.users .card {
+    width: 40%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 15px 19px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+}
+
+.users .card span {
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.users .card h3 {
+    text-align: left;
+    width: 40%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.users .card .user-count {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.users .card i {
+    font-size: 40px;
+    color: #34af6d;
+    margin-bottom: 15px;
+}
+
+.users .card button {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+/* Attendance List Section */
+.attendance {
+    box-shadow: 0 11px 19px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.attendance-list {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.attendance-list h1 {
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Popup Slider */
+.popup-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* Hidden by default */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 90px;
+    }
+
+    .main-content {
+        margin-left: 90px;
+    }
+
+    .main .users .card {
+        width: 100%;
+    }
+}

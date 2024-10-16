@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="student.css">
+    <!-- Google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="rh-international-high-resolution-logo-black-transparent.png" alt="Logo">
+                Tenant Registration
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="attendance2.html"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#tenantDropdown"
+                    aria-expanded="false" aria-controls="tenantDropdown">
+                    <i class="fas fa-user"></i> <span class="sidebar-text">Tenants</span>
+                </a>
+                <ul class="collapse" id="tenantDropdown">
+                    <li><a href="student.html"><span class="sidebar-text">Register Tenant</span></a></li>
+                    <li><a href="Tenantview.html"><span class="sidebar-text">View Tenants</span></a></li>
+                </ul>
+            </li>
+            <li><a href="attendance.html"><i class="fas fa-sign-out-alt"></i> <span
+                        class="sidebar-text">Logout</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Registration form -->
+    <div class="container-form">
+        <div class="title">Tenant Registration</div>
+        <form action="/students" method="POST" id="studentForm">
+            <div class="category">
+                <div class="category-category">
+                    <select id="category" name="category">
+                        <option value="Hillcrest">Hillcrest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">ID Number</span>
+                    <input type="number" id="id" name="id" placeholder="Enter your ID Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Emergency Phone Number</span>
+                    <input type="text" id="emergency_phone" name="emergency_phone"
+                        placeholder="Enter your Emergency Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                <button type="submit" class="submit">Register</button>
+            </div>
+        </form>
+        <ul id="studentList"></ul>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="studentform.js"></script>
+</body>
+
+</html>

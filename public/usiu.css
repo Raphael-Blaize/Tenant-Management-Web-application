@@ -1,0 +1,134 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: url("https://images.unsplash.com/photo-1696861080288-0cc2f1cd48d5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #2b3990;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.attendance {
+    padding: 100px 0;
+}
+
+.attendance h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #fcde30;
+}
+
+.attendance h3 {
+    font-size: 1.8em;
+    color: #fcde30;
+}
+
+.attendance button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 50px;
+}
+
+.log-in {
+    display: flex;
+    /* Use flex to position the two forms side by side */
+    justify-content: center;
+    gap: 20px;
+    /* Space between the login and sign-up sections */
+    margin: 0 auto;
+    padding: 30px 0;
+    /* Add vertical padding for the entire section */
+}
+
+.login-container,
+.signup-container {
+    background-color: rgba(250, 237, 205, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Allow the containers to take full width */
+    max-width: 400px;
+    /* Optional: Set a maximum width */
+}
+
+.login-container h2,
+.signup-container h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #2b3990;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #fcde30;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1em;
+    color: #2b3990;
+    transition: 0.3s;
+}
+
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -15px;
+    font-size: 0.8em;
+    color: #2b3990;
+}
+
+.btn-warning {
+    background-color: #fed500;
+    color: #2b3990;
+}
+
+.btn-warning:hover {
+    background-color: #ffec89;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .log-in {
+        flex-direction: column;
+        /* Stack the forms on smaller screens */
+        align-items: center;
+        /* Center the items */
+    }
+
+    .login-container,
+    .signup-container {
+        width: 90%;
+        /* Take full width on small screens */
+    }
+
+    .attendance h1 {
+        font-size: 2.5em;
+    }
+
+    .attendance h3 {
+        font-size: 1.5em;
+    }
+}

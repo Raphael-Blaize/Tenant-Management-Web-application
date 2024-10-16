@@ -1,0 +1,206 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #dee2e6;
+    color: #2b3990;
+}
+
+.sidebar {
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: width 0.5s;
+}
+
+.sidebar:hover,
+.sidebar.show {
+    width: 250px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 56px;
+    /* Adjusted to accommodate navbar */
+}
+
+.sidebar ul ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul ul li {
+    text-align: center;
+}
+
+.sidebar ul ul a {
+    padding: 5px 10px;
+    color: #ccc;
+}
+
+.sidebar ul ul a:hover {
+    background-color: #495057;
+    color: white;
+}
+
+.collapse {
+    transition: height 0.2s ease;
+}
+
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+}
+
+.sidebar ul li a .sidebar-text {
+    display: none;
+}
+
+.sidebar:hover ul li a .sidebar-text {
+    display: inline-block;
+}
+
+.navbar-brand img {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+.container-form {
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.container-form .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container-form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #2b3990, #fed500, #ffec89);
+}
+
+.container-form form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #2b3990;
+}
+
+.category {
+    display: inline-block;
+    position: relative;
+}
+
+select {
+    padding: 6px 9px;
+    background: linear-gradient(135deg, #2b3990, #fed500, #ffec89);
+    border: 1px solid #2b3990;
+    border-radius: 5px;
+    cursor: pointer;
+    color: linear-gradient(135deg, #2b3990, #fed500, #ffec89);
+    margin-top: 20px;
+}
+
+.category-option {
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+.category-option::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #2b3990, #fed500, #ffec89);
+}
+
+form .submit {
+    height: 45px;
+    margin: 45px 0;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(135deg, #2b3990, #fed500);
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .submit:hover {
+    background: linear-gradient(135deg, #2b3990, #fed500, #ffec89);
+}
+
+@media(max-width:1070px) {
+    .container-form {
+        margin-top: 1em;
+    }
+
+    .sidebar {
+        position: relative;
+    }
+}
