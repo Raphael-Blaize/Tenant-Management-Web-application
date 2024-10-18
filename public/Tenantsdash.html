@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS link -->
     <link rel="stylesheet" href="Tenantsdash.css">
     <!-- Google fonts link -->
@@ -30,76 +31,72 @@
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
-            <li><a href="/home"><i class="fas fa-chart-bar"></i> <span class="sidebar-text">Invoice</span></a></li>
-            <li><a href="attendance.html"><i class="fas fa-sign-out-alt"></i> <span
-                        class="sidebar-text">Logout</span></a></li>
+            <li><a href="#"><i class='bx bx-home'></i> <span class="sidebar-text">Dashboard</span></a></li>
+            <li><a href="/home"><i class='bx bxs-user-account'></i> <span class="sidebar-text">Invoice</span></a></li>
+            <li><a href="attendance.html"><i class='bx bx-exit'></i><span class="sidebar-text">Logout</span></a></li>
         </ul>
     </div>
 
     <!-- Main Content -->
     <div class="container mt-5">
-        <div class="row">
-            <!-- First Main Content -->
-            <div class="col-lg-6 col-md-12 mb-4">
-                <h2 class="mb-4">Welcome to Your Dashboard</h2>
-                <section class="main">
-                    <div class="card shadow-lg border-0 rounded">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <img src="personicon.svg" alt="Person Icon" class="rounded-circle me-4"
-                                    style="width: 100px; height: 100px; object-fit: cover;">
-                                <h3 class="card-title mb-0">Welcome</h3>
+        <div class="cardBox">
+            <div class="card">
+                <div class="cardLarge">
+                    <div>
+                        <div class="numbers">
+                            <h2>Tenant Details</h2>
+                        </div>
+                        <div class="cardName">
+                            <div class="info-row">
+                                <h4>Full Name:</h4>
+                                <span class="tenant-name"></span>
                             </div>
-                            <hr>
-                            <div class="tenant-info mt-3">
-                                <p><strong>Full Name:</strong> <span class="tenant-name"></span></p>
-                                <p><strong>Phone Number:</strong> <span id="tenant-phone"></span></p>
-                                <p><strong>Email:</strong> <span id="tenant-email"></span></p>
-                                <p><strong>House Number:</strong> <span id="tenant-houseNumber"></span></p>
+                            <div class="info-row">
+                                <h4>Phone Number:</h4>
+                                <span id="tenant-phone"></span>
+                            </div>
+                            <div class="info-row">
+                                <h4>Email:</h4>
+                                <span id="tenant-email"></span>
+                            </div>
+                            <div class="info-row">
+                                <h4>House Number:</h4>
+                                <span id="tenant-houseNumber"></span>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div>
+                        <div class="iconBx">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Second Main Content -->
-            <div class="col-lg-6 col-md-12 mb-4 d-flex align-items-start" style="margin-top: 20px;">
-                <section class="main">
-                    <div class="card shadow-lg border-0 rounded" style="min-height: 450px;">
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Transaction History</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Populate transactions here -->
-                                </tbody>
-                            </table>
-                            <div class="property-info mt-4">
-                                <h5 class="mb-3">Property Information</h5>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Property Name</th>
-                                            <th>House Type</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- Populate property information here -->
-                                        <td>Hillcrest Apartments</td>
-                                        <td></td>
-                                        <td>Occupied</td>
-                                        <td></td>
-                                    </tbody>
-                                </table>
-                            </div>
+            <div class="card" onclick="openPaymentPage()">
+                <div class="cardSmall">
+                    <div>
+                        <div class="cardName">
+                            <h2>Payment</h2>
                         </div>
                     </div>
-                </section>
+                    <div class="iconBx">
+                        <ion-icon name="card-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="cardSmall">
+                    <div>
+                        <div class="cardName">
+                            <h2>Comments</h2>
+                        </div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -117,6 +114,11 @@
     <!-- Icons JS -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- ====ionicons===== -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!-- Custom JS file to update the attendance list -->
     <script src="Tenantsdash.js"></script>
@@ -126,6 +128,10 @@
         function scrollToAttendance() {
             const attendance = document.querySelector(".attendance");
             attendance.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function openPaymentPage() {
+            window.location.href = "payment.html";
         }
     </script>
 </body>
